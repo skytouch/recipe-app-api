@@ -8,7 +8,9 @@ docker-compose run --rm app sh -c "python manage.py test"
 docker-compose run --rm app sh -c "python manage.py wait_for_db"
 docker-compose run --rm app sh -c "python manage.py test"
 docker-compose run --rm app sh -c "python manage.py wait_for_db && flake8"
+
 docker-compose up
+docker-compose down
 
 git commit -am "Added GitHub Actions."
 git push origin
